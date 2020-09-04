@@ -53,6 +53,7 @@ body {
 
 h2 {
   text-align: center;
+  margin-top: 32px;
 }
 
 .album-description {
@@ -81,6 +82,7 @@ img {
 #preview {
   text-align: center;
   font-weight: bold;
+  margin-top: 50px;
 }
 
 iframe {
@@ -90,4 +92,11 @@ iframe {
   margin-right: auto;
   width: 50%;
   display: block;
+  border: solid 5px #a28089;
+}
+
+
+ul {
+  text-align: justify;
+  margin: 10px 25%;
 }

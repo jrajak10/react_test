@@ -42,17 +42,18 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <Header />
       <AlbumDescription albumTitle="1. Myrkur: Folkesange"  album={folkesange} description={DESCRIPTION["Myrkur"]}
-        src={ALBUM_URL["Myrkur"]} songs={SONGS["Myrkur"]} />
+        src={ALBUM_URL["Myrkur"]} songs={SONGS["Myrkur"]} id="1" />
       <AlbumDescription albumTitle="2. Code Orange: Underneath" album={underneath} description={DESCRIPTION["Code Orange"]}
-        src={ALBUM_URL["Code Orange"]} songs={SONGS["Code Orange"]} />
+        src={ALBUM_URL["Code Orange"]} songs={SONGS["Code Orange"]} id="2" />
       <AlbumDescription albumTitle="3. Kvelertak: Splid" album={splid} description={DESCRIPTION["Kvelertak"]}
-        src={ALBUM_URL["Kvelertak"]} songs={SONGS["Kvelertak"]} />
+        src={ALBUM_URL["Kvelertak"]} songs={SONGS["Kvelertak"]} id="3" />
         <AlbumDescription albumTitle="4. Trivium: What The Dead Men Say" album={dead_men} description={DESCRIPTION["Trivium"]}
-        src={ALBUM_URL["Trivium"]} songs={SONGS["Trivium"]} />
+        src={ALBUM_URL["Trivium"]} songs={SONGS["Trivium"]} id="4" />
         <AlbumDescription albumTitle="5. Lamb of God: Lamb of God" album={log} description={DESCRIPTION["Lamb of God"]}
-        src={ALBUM_URL["Lamb of God"]} songs={SONGS["Lamb of God"]} />
+        src={ALBUM_URL["Lamb of God"]} songs={SONGS["Lamb of God"]} id="5" />
     </div>
   );
 }
@@ -72,6 +73,19 @@ function Header() {
       <h1 id="header">My Top 5 Albums Of 2020</h1>
     </div>
   );
+}
+
+function Navbar(props){
+  return (
+    <div class="sidenav">
+      <a href="#header-box">Home</a>
+      <a href="#1">#1</a>
+      <a href="#2">#2</a>
+      <a href="#3">#3</a>
+      <a href="#4">#4</a>
+      <a href="#5">#5</a>
+    </div>
+  )
 }
 
 
@@ -100,7 +114,7 @@ function SongsToListenTo(props){
 function AlbumDescription(props) {
   
   return (
-    <div class="album-description">
+    <div class="album-description" id={props.id} >
       <AlbumCover album={props.album} />
       <h2>{props.albumTitle}</h2>
       <p class="description">{props.description}</p>

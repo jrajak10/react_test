@@ -111,7 +111,7 @@ ul {
   display: flex;
   flex-direction: column;
   overflow-x: hidden; /* Disable horizontal scroll */
-  font-size: 40px;
+  font-size: 41px;
   background-color: #edf756;
   border-top: solid 5px #ffa8B6;
   border-right: solid 5px #ffa8B6;
